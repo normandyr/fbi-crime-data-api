@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    title Crime check
+    meta(charset='UTF-8')
+    meta(name='MSU - Computer Science', content='CSC690 - Internet programming')
+    meta(name='Author', content='Hai Duong and Normandy Bryson')
+    link(rel='stylesheet', href='../css/style.css')
+  body
+    div
+      img(src='../Images/title.gif', alt='US Crimes report')
+    p
+      // Insert a blank line here
+    table.center
+      tbody
+        tr
+          td
+            a(href='/state')
+              img(src='../Images/main_map.jpg', alt='Search crimes by State')
+        tr
+          td
+            a#state.button(onclick='state()') Search by States
+      
+    #text_center Copyright (C) by Normandy Bryson and Hai Duong 2018. All right reserved.
+    script(src='../js/crime.js')

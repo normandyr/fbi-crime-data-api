@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+    head
+        title Crime check
+        meta(charset='UTF-8')
+        meta(name='MSU - Computer Science', content='CSC690 - Internet programming')
+        meta(name='Author', content='Hai Duong and Normandy Bryson')
+        link(rel='stylesheet', href='../css/style.css')
+    body
+        div
+            img(src='../Images/title.gif', alt='Crime check website')
+        p
+        // Insert a blank line here
+        .sidenav
+            a(href='/') Home
+            a(href='/state') Search by States
+            a(href='/about') About
+            a(href='javascript: back()') Back
+        .main
+            table.center
+                tbody
+                    tr 
+                       
+                        td
+                            img#st(src='../Images/us-state-map.jpg', alt='Search crimes by State')
+                        td
+                            h2 Search Crime by State
+            p
+                | Select state for reporting:
+                select#selectState
+                    option(selected="", disabled="")  Choose a state to report 
+            #hidden1(hidden='')
+                p
+                    | Select year for reporting:
+                    select#selectYear
+                        option(selected="", disabled="")  Choose a year to report
+            #hidden2(hidden='') 
+                tr
+                     td
+                        form#twitter-share-button
+                            span
+                                button(type='submit') Tweet
+                            span Click Here
+                                script(src='/js/submitcon.js')                        
+                p#stateResult
+                ul#inforesults  
+                    li#information
+                a.button(type='button', onclick='window.location.reload();') Search in another State
+                a.navbar-item(href="/auth/logout") Logout
+        .section
+            .container
+                block main-content   
+
+        #text_center Copyright (C) by Normandy Bryson and Hai Duong 2018. All right reserved.
+        script(src='../js/crime.js')
+        script(src='../js/submit_info.js')

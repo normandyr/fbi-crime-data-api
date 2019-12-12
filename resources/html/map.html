@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Crime check</title>
+        <meta charset="UTF-8">
+        <meta name="MSU - Computer Science" content="CSC690 - Internet programming">
+        <meta name="Author" content="Hai Duong and Normandy Bryson">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div>
+            <img src="../Images/title.gif" alt="Crime check website">
+        </div>
+        <p><!-- Insert a blank line here --></p>
+        <div class="sidenav">
+            <a href="./main.html">Home</a>
+            <a href="./map.html">View crime map</a>
+            <a href="./zip.html">Search by ZIP code</a>
+            <a href="./city.html">Search by city's name</a>
+            <a href="#">About</a>
+            <a href="javascript: back()">Back</a>
+        </div>
+        <div class="main">
+            <h2>Search Crime by State</h2>
+            <p> Select state for reporting:
+                <select class="selectState">
+                    <option id="state" selected disabled value=""> Choose a state to report </option>
+                </select>
+                <button onclick="selectStateResult()"> Submit </button>
+            </p>
+            <div class="hidden">
+            <p id="stateResult">
+                The searching results of ${select} are shown below: <br> 
+            </p>
+            </div>
+        </div>
+        <div id="text_center">Copyright (C) by Normandy Bryson and Hai Duong 2018. All right reserved.</div>
+        <script src="../js/crime.js"></script>
+    </body>
+</html>
